@@ -1,0 +1,120 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+  font-display: swap;
+}
+
+:root {
+  --text-color: #fff;
+  --primary-background: #0a0a23;
+  --card-background: #2a2a40;
+  --link-background: #3b3b4f;
+  --link-text-color: #d0d0d5;
+  --accent-color: #acd157;
+  --gray10: #dfdfe2;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--primary-background);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+.social-links-container {
+  background-color: var(--card-background);
+  max-width: 320px;
+  width: 100%;
+  /* height: auto; */
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.personal-details {
+  margin: 1.25rem 0;
+  line-height: 1.4;
+}
+
+.personal-details p {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.links .link {
+  background-color: var(--link-background);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--link-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.links .link:hover {
+  background-color: var(--accent-color);
+}
+
+.links a:hover {
+  color: var(--card-background);
+}
+
+.attribution {
+  font-size: 0.875rem;
+  text-align: center;
+  position: absolute;
+  bottom: 2rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  .social-links-container {
+    max-width: 380px;
+  }
+}
