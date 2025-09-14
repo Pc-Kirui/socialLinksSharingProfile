@@ -19,6 +19,7 @@
   --link-background: #3b3b4f;
   --link-text-color: #d0d0d5;
   --accent-color: #acd157;
+  --attribution-color: hsl(228, 45%, 44%);
   --gray10: #dfdfe2;
 }
 
@@ -36,7 +37,7 @@ body {
 
 .social-links-container {
   background-color: var(--card-background);
-  max-width: 320px;
+  max-width: 20rem;
   width: 100%;
   padding: 1.5rem;
   border-radius: 12px;
@@ -60,10 +61,10 @@ body {
   line-height: 1.4;
 }
 
-.personal-details h2 {
+.personal-details h1 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-block-end: 0.25rem;
 }
 
 .personal-details p {
@@ -75,7 +76,7 @@ body {
 .role {
   font-size: 0.875rem;
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  margin-block-end: 1.5rem;
 }
 
 .links {
@@ -117,11 +118,17 @@ body {
 
 .attribution a {
   text-decoration: none;
-  color: hsl(228, 45%, 44%);
+  color: var(--attribution-color);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .social-links-container {
-    max-width: 375px;
+    max-width: 23.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .links a {
+    transition: none;
   }
 }
