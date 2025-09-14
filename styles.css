@@ -22,11 +22,6 @@
   --gray10: #dfdfe2;
 }
 
-body,
-html {
-  height: 100%;
-}
-
 body {
   background-color: var(--primary-background);
   color: var(--text-color);
@@ -36,13 +31,13 @@ body {
   flex-direction: column;
   text-align: center;
   font-family: "Inter", sans-serif;
+  min-height: 100vh;
 }
 
 .social-links-container {
   background-color: var(--card-background);
   max-width: 320px;
   width: 100%;
-  /* height: auto; */
   padding: 1.5rem;
   border-radius: 12px;
 }
@@ -61,27 +56,38 @@ body {
 }
 
 .personal-details {
-  margin: 1.25rem 0;
+  margin: 1.5rem 0 0.5rem;
   line-height: 1.4;
+}
+
+.personal-details h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .personal-details p {
   color: var(--accent-color);
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
+}
+
+.role {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
 }
 
 .links {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  margin-top: 1rem;
 }
 
 .links .link {
   background-color: var(--link-background);
-  border-radius: 4px;
-  padding: 0.5rem 0;
+  border-radius: 8px;
+  list-style: none;
 }
 
 .links a {
@@ -91,14 +97,15 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  font-weight: 700;
+  padding: 0.75rem 0;
+  transition: backgrond-color 0.3s ease, color 0.3s ease;
 }
 
-.links .link:hover {
-  background-color: var(--accent-color);
-}
-
-.links a:hover {
+.links a:hover,
+.links a:focus {
   color: var(--card-background);
+  background-color: var(--accent-color);
 }
 
 .attribution {
@@ -115,6 +122,6 @@ body {
 
 @media (min-width: 768px) {
   .social-links-container {
-    max-width: 380px;
+    max-width: 375px;
   }
 }
